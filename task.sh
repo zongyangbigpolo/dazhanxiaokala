@@ -27,7 +27,7 @@ fi
 echo "## 🤔 LAST UPDATED ON: ${currentTimestamp}" >update.md
 
 # Configure local Git user information
-git config --local user.email "92131590@qq.com"
+git config --local user.email "942131590@qq.com"
 git config --local user.name "Polo Li"
 
 # Commit changes to the repository with a random message and the current timestamp
