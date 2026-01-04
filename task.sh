@@ -17,14 +17,11 @@ randomNum=$(($RANDOM % ${#messages[@]}))
 # Get the current date and time
 currentTimestamp=$(date '+%B %d, %Y at %I:%M %p')
 
-# Check if update.md exists, and create it if it doesn't
-if [ ! -e "update.md" ]; then
-    touch update—${currentTimestamp}.md
-    git add update.md
-fi
-
 # Append text to update.md, indicating the last update time
 echo "## 🤔 LAST UPDATED ON: ${currentTimestamp}" >update.md
+
+# Check if update.md exists, and create it if it doesn't
+git add update.md
 
 # Configure local Git user information
 git config --local user.email "942131590@qq.com"
@@ -35,3 +32,4 @@ git config --local user.name "Polo Li"
 # a (all): Automatically add all modified files in the working directory
 # m (message): Specify the commit message that describes the purpose of the commit
 git commit -am "${messages[$randomNum]} on ${currentTimestamp}"
+git push -f
