@@ -19,7 +19,7 @@ currentTimestamp=$(date '+%B %d, %Y at %I:%M %p')
 
 # Check if update.md exists, and create it if it doesn't
 if [ ! -e "update.md" ]; then
-    touch update.md
+    touch update—$currentTimestamp.md
     git add update.md
 fi
 
