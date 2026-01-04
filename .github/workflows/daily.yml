@@ -15,8 +15,8 @@ jobs:
           echo "$(date): Daily auto commit by GitHub Actions" >> log.txt
       - name: Commit changes
         run: |
-          git config user.name "Your Name"
-          git config user.email "your@email.com"
+          git config user.name "Polo Li"
+          git config user.email "942131590@qq.com"
           git add log.txt
           git commit -m "Daily update $(date)"
           git push
